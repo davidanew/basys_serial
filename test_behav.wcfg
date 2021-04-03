@@ -11,18 +11,26 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2910000fs"></ZoomStartTime>
-      <ZoomEndTime time="3018001fs"></ZoomEndTime>
-      <Cursor1Time time="3000000fs"></Cursor1Time>
+      <ZoomStartTime time="123670001fs"></ZoomStartTime>
+      <ZoomEndTime time="123697402fs"></ZoomEndTime>
+      <Cursor1Time time="123685001fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="340"></NameColumnWidth>
-      <ValueColumnWidth column_width="148"></ValueColumnWidth>
+      <ValueColumnWidth column_width="140"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="8" />
    <wvobject fp_name="/test/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/i_top/i_clock_divider/enable" type="logic">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/i_top/div_clk" type="logic">
+      <obj_property name="ElementShortName">div_clk</obj_property>
+      <obj_property name="ObjectShortName">div_clk</obj_property>
    </wvobject>
    <wvobject fp_name="/test/RsRx" type="logic">
       <obj_property name="ElementShortName">RsRx</obj_property>
@@ -43,19 +51,5 @@
    <wvobject fp_name="/test/led" type="array">
       <obj_property name="ElementShortName">led[7:0]</obj_property>
       <obj_property name="ObjectShortName">led[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test/i_block_design/c_counter_binary_0/THRESH0" type="logic">
-      <obj_property name="ElementShortName">THRESH0</obj_property>
-      <obj_property name="ObjectShortName">THRESH0</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test/i_block_design/c_counter_binary_0/Q" type="array">
-      <obj_property name="ElementShortName">Q[15:0]</obj_property>
-      <obj_property name="ObjectShortName">Q[15:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-   </wvobject>
-   <wvobject fp_name="/test/i_block_design/util_ds_buf_0_BUFGCE_O" type="array">
-      <obj_property name="ElementShortName">util_ds_buf_0_BUFGCE_O[0:0]</obj_property>
-      <obj_property name="ObjectShortName">util_ds_buf_0_BUFGCE_O[0:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

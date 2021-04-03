@@ -2,11 +2,7 @@
 2020.2
 Nov 18 2020
 09:47:47
-C:/Users/david/basys_serial/basys_serial.ip_user_files/bd/block_design/ip/block_design_c_counter_binary_0_0/sim/block_design_c_counter_binary_0_0.vhd,1615135665,vhdl,,,,block_design_c_counter_binary_0_0,,,,,,,,
-C:/Users/david/basys_serial/basys_serial.ip_user_files/bd/block_design/ip/block_design_uart_rx_0_0/sim/block_design_uart_rx_0_0.v,1614533719,verilog,,C:/Users/david/basys_serial/basys_serial.ip_user_files/bd/block_design/sim/block_design.v,,block_design_uart_rx_0_0,,,../../../../basys_serial.gen/sources_1/ip/clk_wiz_0,,,,,
-C:/Users/david/basys_serial/basys_serial.ip_user_files/bd/block_design/ip/block_design_util_ds_buf_0_1/sim/block_design_util_ds_buf_0_1.vhd,1615133200,vhdl,,,,block_design_util_ds_buf_0_1,,,,,,,,
-C:/Users/david/basys_serial/basys_serial.ip_user_files/bd/block_design/ip/block_design_util_ds_buf_0_1/util_ds_buf.vhd,1615133200,vhdl,,,,util_ds_buf,,,,,,,,
-C:/Users/david/basys_serial/basys_serial.ip_user_files/bd/block_design/sim/block_design.v,1617461090,verilog,,C:/Users/david/basys_serial/basys_serial.srcs/sim_1/new/sim.v,,block_design,,,../../../../basys_serial.gen/sources_1/ip/clk_wiz_0,,,,,
 C:/Users/david/basys_serial/basys_serial.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
-C:/Users/david/basys_serial/basys_serial.srcs/sim_1/new/sim.v,1617461076,verilog,,,,test,,,../../../../basys_serial.gen/sources_1/ip/clk_wiz_0,,,,,
-C:/Users/david/basys_serial/basys_serial.srcs/sources_1/new/top.v,1614530998,verilog,,C:/Users/david/basys_serial/basys_serial.ip_user_files/bd/block_design/ip/block_design_uart_rx_0_0/sim/block_design_uart_rx_0_0.v,,uart_rx,,,../../../../basys_serial.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/david/basys_serial/basys_serial.srcs/sim_1/new/sim.v,1617473151,verilog,,,,test,,,,,,,,
+C:/Users/david/basys_serial/basys_serial.srcs/sources_1/new/top.v,1617484812,verilog,,C:/Users/david/basys_serial/basys_serial.srcs/sim_1/new/sim.v,,clock_divider;top,,,,,,,,
+C:/Users/david/basys_serial/basys_serial.srcs/sources_1/new/uart_rx.v,1614530998,verilog,,C:/Users/david/basys_serial/basys_serial.srcs/sources_1/new/top.v,,uart_rx,,,,,,,,

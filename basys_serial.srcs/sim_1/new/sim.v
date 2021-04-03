@@ -12,8 +12,16 @@ module test;
   wire [7:0] led;
   reg [7:0] test_byte = 8'hAA;
   integer i=0;
+  /*
 
   block_design i_block_design(
+    .clk(clk),
+    .RsRx(RsRx),
+    .led(led)
+  );
+  */
+  
+  top i_top(
     .clk(clk),
     .RsRx(RsRx),
     .led(led)
