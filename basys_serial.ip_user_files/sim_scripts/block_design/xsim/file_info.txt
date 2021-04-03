@@ -1,0 +1,6 @@
+block_design_uart_rx_0_0.v,verilog,xil_defaultlib,../../../bd/block_design/ip/block_design_uart_rx_0_0/sim/block_design_uart_rx_0_0.v,
+util_ds_buf.vhd,vhdl,xil_defaultlib,../../../bd/block_design/ip/block_design_util_ds_buf_0_1/util_ds_buf.vhd,
+block_design_util_ds_buf_0_1.vhd,vhdl,xil_defaultlib,../../../bd/block_design/ip/block_design_util_ds_buf_0_1/sim/block_design_util_ds_buf_0_1.vhd,
+block_design_c_counter_binary_0_0.vhd,vhdl,xil_defaultlib,../../../bd/block_design/ip/block_design_c_counter_binary_0_0/sim/block_design_c_counter_binary_0_0.vhd,
+block_design.v,verilog,xil_defaultlib,../../../bd/block_design/sim/block_design.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

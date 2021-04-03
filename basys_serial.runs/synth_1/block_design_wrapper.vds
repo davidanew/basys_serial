@@ -1,0 +1,314 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Apr  3 16:23:57 2021
+# Process ID: 7588
+# Current directory: C:/Users/david/basys_serial/basys_serial.runs/synth_1
+# Command line: vivado.exe -log block_design_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source block_design_wrapper.tcl
+# Log file: C:/Users/david/basys_serial/basys_serial.runs/synth_1/block_design_wrapper.vds
+# Journal file: C:/Users/david/basys_serial/basys_serial.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source block_design_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top block_design_wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17292
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'block_design_wrapper' [C:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/hdl/block_design_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'block_design' [c:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/synth/block_design.v:13]
+INFO: [Synth 8-6157] synthesizing module 'block_design_c_counter_binary_0_0' [C:/Users/david/basys_serial/basys_serial.runs/synth_1/.Xil/Vivado-7588-LAPTOP-MSI/realtime/block_design_c_counter_binary_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'block_design_c_counter_binary_0_0' (1#1) [C:/Users/david/basys_serial/basys_serial.runs/synth_1/.Xil/Vivado-7588-LAPTOP-MSI/realtime/block_design_c_counter_binary_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'Q' of module 'block_design_c_counter_binary_0_0' is unconnected for instance 'c_counter_binary_0' [c:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/synth/block_design.v:30]
+WARNING: [Synth 8-7023] instance 'c_counter_binary_0' of module 'block_design_c_counter_binary_0_0' has 3 connections declared, but only 2 given [c:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/synth/block_design.v:30]
+INFO: [Synth 8-6157] synthesizing module 'block_design_uart_rx_0_0' [C:/Users/david/basys_serial/basys_serial.runs/synth_1/.Xil/Vivado-7588-LAPTOP-MSI/realtime/block_design_uart_rx_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'block_design_uart_rx_0_0' (2#1) [C:/Users/david/basys_serial/basys_serial.runs/synth_1/.Xil/Vivado-7588-LAPTOP-MSI/realtime/block_design_uart_rx_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'tx_flag' of module 'block_design_uart_rx_0_0' is unconnected for instance 'uart_rx_0' [c:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/synth/block_design.v:33]
+WARNING: [Synth 8-7023] instance 'uart_rx_0' of module 'block_design_uart_rx_0_0' has 4 connections declared, but only 3 given [c:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/synth/block_design.v:33]
+INFO: [Synth 8-6157] synthesizing module 'block_design_util_ds_buf_0_1' [C:/Users/david/basys_serial/basys_serial.runs/synth_1/.Xil/Vivado-7588-LAPTOP-MSI/realtime/block_design_util_ds_buf_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'block_design_util_ds_buf_0_1' (3#1) [C:/Users/david/basys_serial/basys_serial.runs/synth_1/.Xil/Vivado-7588-LAPTOP-MSI/realtime/block_design_util_ds_buf_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'block_design' (4#1) [c:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/synth/block_design.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'block_design_wrapper' (5#1) [C:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/hdl/block_design_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1000.629 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/ip/block_design_uart_rx_0_0/block_design_uart_rx_0_0/block_design_uart_rx_0_0_in_context.xdc] for cell 'block_design_i/uart_rx_0'
+Finished Parsing XDC File [c:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/ip/block_design_uart_rx_0_0/block_design_uart_rx_0_0/block_design_uart_rx_0_0_in_context.xdc] for cell 'block_design_i/uart_rx_0'
+Parsing XDC File [c:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/ip/block_design_util_ds_buf_0_1/block_design_util_ds_buf_0_1/block_design_util_ds_buf_0_1_in_context.xdc] for cell 'block_design_i/util_ds_buf_0'
+Finished Parsing XDC File [c:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/ip/block_design_util_ds_buf_0_1/block_design_util_ds_buf_0_1/block_design_util_ds_buf_0_1_in_context.xdc] for cell 'block_design_i/util_ds_buf_0'
+Parsing XDC File [c:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/ip/block_design_c_counter_binary_0_0/block_design_c_counter_binary_0_0/block_design_c_counter_binary_0_0_in_context.xdc] for cell 'block_design_i/c_counter_binary_0'
+Finished Parsing XDC File [c:/Users/david/basys_serial/basys_serial.gen/sources_1/bd/block_design/ip/block_design_c_counter_binary_0_0/block_design_c_counter_binary_0_0/block_design_c_counter_binary_0_0_in_context.xdc] for cell 'block_design_i/c_counter_binary_0'
+Parsing XDC File [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:73]
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:74]
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:75]
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:76]
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:77]
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:78]
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:82]
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:83]
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:84]
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:85]
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:86]
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:87]
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:88]
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:89]
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:90]
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:91]
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:92]
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:93]
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:94]
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:95]
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:97]
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:98]
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:100]
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:101]
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:102]
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:103]
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:104]
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:105]
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:106]
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'btnC'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:111]
+WARNING: [Vivado 12-584] No ports matched 'btnC'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:112]
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:113]
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:114]
+WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:116]
+WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:117]
+WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:118]
+WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:119]
+WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc:120]
+Finished Parsing XDC File [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/block_design_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/david/basys_serial/basys_serial.srcs/constrs_1/new/basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/block_design_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/block_design_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/david/basys_serial/basys_serial.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/david/basys_serial/basys_serial.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1000.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for block_design_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for block_design_i/uart_rx_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for block_design_i/util_ds_buf_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for block_design_i/c_counter_binary_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------------------+----------+
+|      |BlackBox name                     |Instances |
++------+----------------------------------+----------+
+|1     |block_design_c_counter_binary_0_0 |         1|
+|2     |block_design_uart_rx_0_0          |         1|
+|3     |block_design_util_ds_buf_0_1      |         1|
++------+----------------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------+------+
+|      |Cell                            |Count |
++------+--------------------------------+------+
+|1     |block_design_c_counter_binary_0 |     1|
+|2     |block_design_uart_rx_0          |     1|
+|3     |block_design_util_ds_buf_0      |     1|
+|4     |IBUF                            |     2|
+|5     |OBUF                            |     8|
++------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1000.629 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1000.629 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1000.629 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1000.629 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1000.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 87 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1000.629 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/david/basys_serial/basys_serial.runs/synth_1/block_design_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file block_design_wrapper_utilization_synth.rpt -pb block_design_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  3 16:24:27 2021...

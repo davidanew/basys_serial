@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../basys_serial.ip_user_files/bd/block_design/ip/block_design_util_ds_buf_0_1/util_ds_buf.vhd" \
+"../../../../basys_serial.ip_user_files/bd/block_design/ip/block_design_util_ds_buf_0_1/sim/block_design_util_ds_buf_0_1.vhd" \
+"../../../../basys_serial.ip_user_files/bd/block_design/ip/block_design_c_counter_binary_0_0/sim/block_design_c_counter_binary_0_0.vhd" \
+
+# Do not sort compile order
+nosort
