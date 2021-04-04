@@ -1,93 +1,76 @@
 `timescale 1ns / 1ps
 
-/*
-module top(
-    input btnC,
-    output [15:0] led
-    );
-    assign led[0] = btnC;
-endmodule
-
-*/
-
-// https://github.com/progranism/Open-Source-FPGA-Bitcoin-Miner/blob/master/src/uart_rx.v
-// UART RX Module
-//
-// 8 data bits, 0 parity, 1 stop.
-//
-// * Expects a clock which is 16x the serial data rate.
-// * Oversamples at 16x the baud rate, and will synchronize to the start bit.
-// * Samples in the middle of each bit.
-// * Does not tolerate noise ( will reject noisy data).
-
-// Sampling graph:
-// State:   [  S  S  ]                    [  M  ]                                         [  M  ]
-// Serial:  1  1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  1  1  1  1  1  1  1  1  1  1  1  1
-// Counter: X  0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 0  1  2  3  4  5  6  7  8  9  10 11 12 13 14
-// 
-
+// Expects clock 16x baud rate
+// serial input on rx_serial
+// data_ready pulses high when data is valid
+// data_out set when the data is valid
 module uart_rx (
 	input clk,
-	input rx_serial,
-	output reg tx_flag = 1'b0,
-	output reg [7:0] tx_byte = 8'd0
-);
-
-	//
-	reg [5:0] serial = 6'b1111_11;
-	reg [3:0] counter = 4'd0;
-	reg [3:0] state = 4'd0;
-	reg [8:0] partial_byte = 9'd0;
-
-	// Detectors
-	wire start_detect = serial[5] & serial[4] & serial[3] & ~serial[2];
-	wire one_detect = serial[5] & serial[4] & serial[3];
-	wire zero_detect = ~serial[5] & ~serial[4] & ~serial[3];
-
-	//
+	input serial_in,
+	output reg data_ready = 1'b0,
+	output reg [7:0] data_out = 8'd0
+    );
+    // Counter at zero means start bit not detected
+    reg [15:0] counter = 1'b0;
+    // Need to store revious value so we can detect the start bit transistion
+    reg prev_value = 1'b0;
+    // Store data internally until we have read the entire byte 
+    reg [7:0] byte_internal = 8'b0;
 	always @ (posedge clk)
 	begin
-		// Meta-stability protection and history
-		serial <= {serial[4:0], rx_serial};
-
-		// What fraction of bit time are we at
-		counter <= counter + 4'd1;
-
-		if (tx_flag)
-			tx_flag <= 1'b0;
-
-		// Finite-State-Machine
-		if (state == 4'd0)
-		begin
-			if (start_detect)
-			begin
-				state <= 4'd1;
-				counter <= 4'd0;
-			end
-		end
-		else if (counter == 4'd9)
-		begin
-			state <= state + 4'd1;
-			partial_byte <= {one_detect, partial_byte[8:1]};
-
-			// Noise error! Reset!
-			if (~one_detect & ~zero_detect)
-				state <= 4'd0;
-			else if ((state == 4'd1) & ~zero_detect)	// Start bit error
-				state <= 4'd0;
-		end
-		else if (state == 4'd11)
-		begin
-			state <= 4'd0;
-			
-			// Stop bit correctly received?
-			if (partial_byte[8])
-			begin
-				tx_flag <= 1'b1;
-				tx_byte <= partial_byte[7:0];
-			end
-		end
+	   // If counter has not started
+	   if (counter == 16'd0)
+	   begin
+	       // If start bit detected
+	       if ( serial_in == 1'b0 & prev_value == 1'b0)
+	       begin
+	           // Setting to 1 starts counting
+	           counter = 16'd1;
+	       end
+	   end
+	   // If we are in the middle of start bit
+	   else if (counter == 16'd8) // 16 * 1
+	   begin
+	       // check input, should be 0
+	       if (serial_in == 1'b1)
+	       begin
+	           // Should not be 1 as it is a start bit, reset counter
+	           counter = 15'b0;
+	       end
+	       else 
+	       begin
+	           // Otherwise we are ok to carry on
+	           counter <= counter + 1'b1;
+	       end	   
+	   end	   
+	   // If counter has reached end
+	   else if (counter == 16'd144) // 16 * 9
+	   begin
+	       counter = 16'd0;
+	       // Negate data_ready which should have been set earlier
+	       data_ready <= 1'b0;
+	   end
+	   // Else normal signal checks	   
+	   else
+	   begin
+	       case(counter)
+	           32'd24 : byte_internal[0] = serial_in; // tick 8 + 1 * 16
+	           32'd40 : byte_internal[1] = serial_in; // tick 8 + 2 * 16
+	           32'd56 : byte_internal[2] = serial_in; // tick 8 + 3 * 16
+	           32'd72 : byte_internal[3] = serial_in; // tick 8 + 4 * 16
+	           32'd88 : byte_internal[4] = serial_in; // tick 8 + 5 * 16
+	           32'd104 : byte_internal[5] = serial_in; // tick 8 + 6 * 16
+	           32'd120 : byte_internal[6] = serial_in; // tick 8 + 7 * 16
+	           32'd136 : // last bit, tick 8 + 8 * 16
+	           begin
+	               byte_internal[7] = serial_in; 
+	               // Set data_ready and set output when we know the data is valid
+	               data_ready = 1'b1;
+	               data_out <= byte_internal;
+	           end
+	       endcase
+	       counter <= counter + 1'b1;
+	   end
+	   prev_value = serial_in;
 	end
-
 endmodule
-
